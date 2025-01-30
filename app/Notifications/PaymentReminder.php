@@ -24,7 +24,6 @@ class PaymentReminder extends Notification
         return (new MailMessage)
                     ->subject('Reminder Pembayaran Uang Semester')
                     ->line('Ini adalah pengingat bahwa pembayaran uang semester Anda akan jatuh tempo pada ' . $this->dueDate . '.')
-                    ->action('Lakukan Pembayaran', url('/send-payment-success'))
-                    ->line('Terima kasih telah menggunakan layanan kami.');
+                    ->line('Mohon transaksi diproses sebelum waktu jatuh tempo.');
     }
 }
